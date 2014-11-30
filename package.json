@@ -1,0 +1,36 @@
+{
+  "name": "videogames",
+  "version": "1.0.0",
+  "description": "8-Bit Videogames",
+  "main": "index.html",
+  "scripts": {
+    "test": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/billybrown/videogames"
+  },
+  "keywords": [
+    "pixelart",
+    "pixel",
+    "illustrations",
+    "design",
+    "8bit",
+    "free",
+    "Video Games"
+  ],
+  "author": "Bill Brown",
+  "bugs": {
+    "url": "https://github.com/billybrown/videogames/issues"
+  },
+  "homepage": "b.illbrown.com/videogames",
+  "engines": {
+    "node": "~0.10.33"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-gh-pages": "^0.9.1",
+    "grunt-node-version": "^1.0.0",
+    "jit-grunt": "^0.9.0"
+  }
+}
