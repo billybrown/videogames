@@ -1,0 +1,343 @@
+/* @override http://b.illbrown.com/videogames/screen.css */
+
+/* HTML5 ✰ Boilerplate
+ * ==|== normalize ==========================================================
+ */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; }
+
+html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+body { margin: 0; font-size: 13px; line-height: 1.231; }
+body, button, input, select, textarea { font: normal 16px/23px Otari, Georgia, Verdana; color: #444; }
+
+::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
+::selection { background: #fe57a1; color: #fff; text-shadow: none; }
+
+a { color: #018400; text-decoration: none;}
+a:visited { color: #018400; }
+a:hover { color: #5bd107; }
+a:focus { outline: thin dotted; }
+a:hover, a:active { outline: 0; }
+
+abbr[title] { border-bottom: 1px dotted; }
+b, strong { font-weight: bold; }
+blockquote { margin: 1em 40px; }
+dfn { font-style: italic; }
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+ins { background: #ff9; color: #000; text-decoration: none; }
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+pre, code, kbd, samp { font-family: monospace, monospace; _font-family: 'courier new', monospace; font-size: 1em; }
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+small { font-size: 85%; }
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+ul, ol { margin: 1em 0; padding: 0 0 0 0px; }
+dd { margin: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+svg:not(:root) { overflow: hidden; }
+figure { margin: 0; }
+
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+label { cursor: pointer; }
+legend { border: 0; *margin-left: -7px; padding: 0; }
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+button, input { line-height: normal; *overflow: visible; }
+table button, table input { *overflow: auto; }
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; }
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+textarea { overflow: auto; vertical-align: top; resize: vertical; }
+input:valid, textarea:valid {  }
+input:invalid, textarea:invalid { background-color: #f0dddd; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+
+/* ==|== primary styles =====================================================
+   Author: 
+   ========================================================================== */
+
+@font-face {
+    font-family: 'Otari';
+    src: url('fonts/otari-webfont.eot?') format('eot'),
+         url('fonts/otari-webfont.woff') format('woff'),
+         url('fonts/otari-webfont.ttf') format('truetype'),
+         url('fonts/otari-webfont.svg#webfontUriAy6YA') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gnuolane';
+    src: url('fonts/lane-webfont.eot?') format('eot'),
+         url('fonts/lane-webfont.woff') format('woff'),
+         url('fonts/lane-webfont.ttf') format('truetype'),
+         url('fonts/lane-webfont.svg#webfontuEnsOj0d') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/**** Base styles ****/
+
+body {
+  background: url(img/consols_bg3.png) -60% 0 repeat-x #bbebe8;
+  padding: 0 20px 0px 20px;
+}
+
+h1 {
+  font: normal 60px/60px Gnuolane, Georgia, Verdana;
+  color: #333;
+  background: url(img/fence.png) repeat;
+  margin-bottom: 15px;
+  text-shadow: -5px 5px rgba(0,0,0, .1);
+}
+
+h2 {
+  font: normal 19px/25px Otari, Georgia, Verdana;
+  color: #333;
+  padding: 0 0 0px 0;
+}
+
+.systems {
+margin: 0 0 3px 0;
+}
+
+header[role="banner"] {
+margin-top: 0px;
+margin-bottom: 20px;
+text-align: center;
+}
+
+#info {
+  padding-bottom: 0px;
+}
+
+#info div {
+  width: 33%;
+  float: left;
+  text-align: left;
+}
+
+#downloads, #downloads p{
+  background: url(img/fence.png) repeat;
+  padding: 0px 0;
+  text-align: center;
+}
+
+figure{
+  margin: 10px auto ;
+  max-width: 270px;
+  height: 100px;
+}
+
+.filters li { 
+  display: inline-block;
+  font: normal 18px/25px Gnuolane, Otari, Georgia, Verdana;
+  color: #bcd893;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+.filters li a {
+  text-decoration: none;
+   background: #5bd107;
+  padding: 5px 5px 3px 5px;
+  color: #fff;
+}
+
+.filters li a:hover { 
+  background: 0;
+  color: #018400;
+}
+
+.filters li a:active {
+}
+
+.filters  li.label {
+background: 0;
+color: #333;
+  font: normal 18px/25px Otari, Georgia, Verdana;
+  margin-right: 5px;
+}
+  
+.item img {
+width: 110px;
+}
+
+.item {
+  padding: 5px;
+  background: #fff;
+  margin: 0 5px 5px 0;
+}
+
+.variable-sizes .item.width2 { width: 100%; }
+
+.variable-sizes .item.height2 { height: 300px; }
+
+.variable-sizes .item.width2.height2 {
+  font-size: 2.0em;
+}
+
+.item.large,
+.variable-sizes .item.large,
+.variable-sizes .item.large.width2.height2 {
+  z-index: 100;
+}
+
+.item.large img {
+width: 235px;
+}
+
+.clickable .item:hover {
+  cursor: pointer;
+  background: 0;
+}
+
+div#container {
+	border-bottom: 1px dotted #bbb;
+	padding-bottom: 10px;
+	margin-top: 10px;
+}
+
+div#clouds {
+	background:  url(img/mario_clouds.gif) -20% 0 repeat;
+	height: 115px;
+	margin: 0 -20px;
+}
+
+div#bushes {
+	background:  url(img/mario_bushes.gif) -40% 0 repeat;
+	height: 136px;
+	margin: 0 -20px;
+}
+
+div#ground {
+	background:  url(img/mario_ground.gif) -60% 0 repeat;
+	height: 42px;
+	margin: 0 -20px;
+}
+
+/**** Isotope Filtering ****/
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+          transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+.center {
+  padding: 0px 0px 0px 0;
+  margin: 0px auto 0px;
+  max-width: 1130px;
+  text-align: center;
+  }
+
+
+/* ==|== non-semantic helper classes ======================================== */
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.ir br { display: none; }
+.hidden { display: none !important; visibility: hidden; }
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+.invisible { visibility: hidden; }
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+
+/* ==|== media queries ====================================================== */
+
+@media (max-width:1000px) {
+  header[role="banner"] img {
+    float: none;
+  }
+  h2 {
+  text-align: center;
+  }
+  #info div {
+    width: 100%;
+    float: 0;
+  }
+  #downloads {
+  border-top: 1px dotted #bbb;
+  border-bottom: 1px solid #bbb;
+  padding-top: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  }
+}
+
+@media all and (max-device-width: 420px), all and (max-width: 420px) {
+
+  body {
+  width: 420px;
+  }
+  
+  .center {
+    max-width: 400px;
+  }
+  
+}
+
+
+
+/* ==|== print styles ======================================================= */
+ 
+@media print {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } 
+  a, a:visited { text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; } 
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; }
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}
